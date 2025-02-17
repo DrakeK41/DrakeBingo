@@ -52,5 +52,9 @@ class BingoCaller {
     public List<String> getCalledNumbers() {
         return calledNumbers;
     }
+    // Method to extract only the number part of the called number (removes the letter)
+    public String getNumberPart(String calledNumber) {
+        return calledNumber.replaceAll("[^0-9]", "");  // Strips non-numeric characters
+    }
 }
 
